@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import {Link } from 'react-router-dom';
 
-const Recommends = (props) => {
+const Originals = (props) => {
   return (
     <Container>
-      <h4>Recommended for You</h4>
+      <h4>Originals</h4>
       <Content>
         <Wrap>
           <img src='https://wallpapercave.com/dwp1x/wp2383871.jpg' alt='' />
@@ -26,7 +26,7 @@ const Recommends = (props) => {
 const Container = styled.div`
   padding: 0 0 26px;
   font: 400 16px/24px 'Roboto', sans-serif;
-  
+
 `;
 
 const Content = styled.div`
@@ -39,7 +39,7 @@ const Content = styled.div`
   }
 `;
 
-export default Recommends;
+export default Originals;;
 
 const Wrap = styled.div`
   border-radius: 10px;
