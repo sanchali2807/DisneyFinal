@@ -25,6 +25,12 @@ function ImgSlider() {
       <Wrap>
         <img src="public/images/slider-badag.jpg" alt="" />
       </Wrap>
+      <Wrap>
+        <img src="public/images/slider-scale.jpg" alt="" />
+      </Wrap>
+      <Wrap>
+        <img src="public/images/slider-scales.jpg" alt="" />
+      </Wrap>
     </Carousel>
   )
 }
@@ -32,7 +38,7 @@ function ImgSlider() {
 export default ImgSlider
 
 const Carousel = styled(Slider)`
-  margin-top: 80px;
+  margin-top: 0px;
 
   ul li button {
     &:before {
