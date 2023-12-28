@@ -7,16 +7,16 @@ const Trending = (props) => {
       <h4>Trending</h4>
       <Content>
         <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383871.jpg' alt='' />
+          <img src='https://www.themoviedb.org/t/p/original/tBHDVtEcMl06FbCURRLGVg3TpXp.jpg' alt='' />
           </Wrap>
           <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383874.jpg' alt='' />
+          <img src='https://th.bing.com/th/id/OIP.0wtkgREsUmLx60Z5bGX0uAHaLH?rs=1&pid=ImgDetMain' alt='' />
           </Wrap>
           <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383834.jpg' alt='' />
+          <img src='https://th.bing.com/th/id/OIP.b7wDYzUlO4F_aI11-41eAQHaK3?w=682&h=1000&rs=1&pid=ImgDetMain' alt='' />
           </Wrap>
           <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383842.jpg' alt='' />
+          <img src='https://th.bing.com/th/id/OIP.NITZdJhN0MbRSFDCHrQqSAHaKk?rs=1&pid=ImgDetMain' alt='' />
           </Wrap>
       </Content>
     </Container>

@@ -7,7 +7,7 @@ const Recommends = (props) => {
       <h4>Recommended for You</h4>
       <Content>
         <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383871.jpg' alt='' />
+          <img src='https://th.bing.com/th/id/OIP.xZ-nLHDYQ5Wgezf8X5r5swHaEK?rs=1&pid=ImgDetMain' alt='' />
           </Wrap>
           <Wrap>
           <img src='https://wallpapercave.com/dwp1x/wp2383874.jpg' alt='' />

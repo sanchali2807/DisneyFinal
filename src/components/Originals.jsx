@@ -7,16 +7,16 @@ const Originals = (props) => {
       <h4>Originals</h4>
       <Content>
         <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383871.jpg' alt='' />
+          <img src='https://www.cnet.com/a/img/resize/24adea5657094a150eccdba34ed40dc8354a9f34/hub/2022/01/14/848244d8-e2ce-43e0-b725-b5b81b911999/encanto-poster.jpg?auto=webp&width=1200' alt='' />
           </Wrap>
           <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383874.jpg' alt='' />
+          <img src='https://th.bing.com/th/id/OIP.M07sDw2tJzai3cZ2iS1sJgHaLH?rs=1&pid=ImgDetMain' alt='' />
           </Wrap>
           <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383834.jpg' alt='' />
+          <img src='https://www.disneyplusinformer.com/wp-content/uploads/2021/11/B7C7891B-79FD-4980-B0BC-9FA98EA12FE1-1230x1536.jpeg' alt='' />
           </Wrap>
           <Wrap>
-          <img src='https://wallpapercave.com/dwp1x/wp2383842.jpg' alt='' />
+          <img src="https://www.liveforfilm.com/wp-content/uploads/2022/08/hocus-pocus-2-poster.jpg" alt='' />
           </Wrap>
       </Content>
     </Container>

@@ -1,9 +1,14 @@
-// HeaderComponent.jsx
 import React from 'react';
-import {useEffect} from 'react';
 import styled from 'styled-components';
 
+  
+
+
+
 function Header() {
+ 
+
+  
   return (
     <Nav>
       <Logo src="images/logo.svg" />
@@ -138,7 +143,8 @@ letter-spacing: 2px;
 border: 1px solid #f9f9f9;
 border-radius: 4px;
 transition: all .2s ease-in-out;
-margin-left: auto; 
+margin-left: auto;
+cursor: pointer;
 
 &:hover {
   background-color: #f9f9f9;
