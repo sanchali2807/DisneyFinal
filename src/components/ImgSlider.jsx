@@ -1,41 +1,39 @@
-import React from 'react'
-import Slider from 'react-slick'
+import React from 'react';
+import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 function ImgSlider() {
-
   let settings = {
-      dots: true,
-      infinite: true,
+    dots: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true
-
-  }
+    autoplay: true,
+    arrows: false,
+  };
 
   return (
-    <Carousel{...settings}>
+    <Carousel {...settings}>
       <Wrap>
-        <img src="public/images/slider-badging.jpg" alt="" />
+        <img src="WhatsApp Image 2024-08-21 at 20.37.19_506b24fe.jpg" />
       </Wrap>
       <Wrap>
-        <img src="public/images/slider-badag.jpg" alt="" />
+        <img src="Hack Your Brain.png" alt="The Hackathon" />
       </Wrap>
       <Wrap>
-        <img src="public/images/slider-scale.jpg" alt="" />
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2023/03/ceo-conclave.jpg" alt="Sandbox" />
       </Wrap>
       <Wrap>
-        <img src="public/images/slider-scales.jpg" alt="" />
+        <img src="https://www.chitkara.edu.in/wp-content/uploads/2023/12/Lit-Fest-banner.jpg" alt="Litfest" />
       </Wrap>
     </Carousel>
-  )
+  );
 }
 
-export default ImgSlider
+export default ImgSlider;
 
 const Carousel = styled(Slider)`
   margin-top: 0px;
@@ -46,30 +44,36 @@ const Carousel = styled(Slider)`
       color: rgb(150, 158, 171);
     }
   }
+
   li.slick-active button::before {
     color: white;
   }
+
   .slick-list {
     overflow: visible;
   }
+
   button {
     z-index: 1;
-
   }
+`;
 
-`
 const Wrap = styled.div`
   cursor: pointer;
+
   img {
-    border: 4px solid transparent;
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 400px; 
+    object-fit: contain; 
+    border: 4px solid transparent;
     border-radius: 4px;
-    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px; 
-    transition-duraction: 30s;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, 
+                rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    transition-duration: 0.3s;
+
     &:hover {
       border: 4px solid rgba(249, 249, 249, 0.8);
-
     }
   }
-`
+`;

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to bottom left, #b5e4fb, #0a0a0b); 
+            color: #f0f0f0; 
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 95%;
+            height: 70px;
+            background: #090b13;
+            z-index: 1000; 
+            display: flex;
+            align-items: center;
+            padding: 0 36px;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header:hover {
+            background: #121417;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        header img {
+            width: 80px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        header nav div {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 16px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #6dd5ed;
+            transform: scale(1.05);
+        }
+
+        header nav a.active {
+            font-weight: bold;
+            border-bottom: 2px solid #6dd5ed;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        header a.login {
+            margin-left: auto;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header a.login:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 20px;
+            background-color: rgba(164, 184, 247, 0.841);
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+        }
+
+        .faq {
+            background: #1e1e1e; 
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            transition: box-shadow 0.3s;
+        }
+
+        .faq:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        .accordion {
+            background-color: #a5c5f0; 
+            color: #0e0d0d; 
+            cursor: pointer;
+            padding: 15px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .accordion::after {
+            content: '▼';
+            font-size: 18px;
+            color: #030303; 
+            transition: transform 0.3s;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .accordion.active::after {
+            transform: rotate(-180deg);
+        }
+
+        .accordion:hover {
+            background-color: #3e5bee; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 15px;
+            background-color: #333333; 
+            border-radius: 0 0 10px 10px;
+            transition: max-height 0.3s ease-out, padding 0.3s;
+        }
+
+        .panel.show {
+            padding: 15px;
+            max-height: 500px; 
+        }
+
+        .panel p {
+            margin: 0;
+            color: #d0d0d0; 
+            line-height: 1.6;
+        }
+
+        .accordion.active, .accordion:hover {
+            background-color: #cdf7fd; 
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .header input {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .accordion {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/mini-logo.png" alt="Logo">
+            <div>
+                <a href="/">Home</a>
+                <a href="/faq" class="active">FAQ</a>
+                <a href="/contactus.html">Contact Us</a>
+            </div>
+            <a href="#" class="login">Login</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="faq">
+            <button class="accordion">What services do you offer?</button>
+            <div class="panel">
+                <p>We offer a full range of event management services including planning, coordination, vendor management, on-site execution, and post-event follow-up. Whether it's a wedding, corporate event, or private party, we handle all the details to make your event a success.</p>
+            </div>
+
+            <button class="accordion">How can I request event management services for my college event?</button>
+            <div class="panel">
+                <p>You can request our services by filling out the event request form available on our website under the ‘Event Services’ section. Alternatively, you can contact our office directly via email or phone to discuss your event needs.</p>
+            </div>
+
+            <button class="accordion">What types of events do you manage?</button>
+            <div class="panel">
+                <p>We handle a wide range of events including academic conferences, seminars, workshops, student parties, graduation ceremonies, and more. Our team is equipped to manage both small and large-scale events, ensuring that all details are meticulously planned and executed.</p>
+            </div>
+
+            <button class="accordion">Can student organizations request event management support?</button>
+            <div class="panel">
+                <p>Absolutely! We encourage student organizations to reach out to us for assistance with their events. We can help with planning, logistics, and execution to ensure that your event runs smoothly.</p>
+            </div>
+
+            <button class="accordion">How early should I book your services for an event?</button>
+            <div class="panel">
+                <p>For major events, it's best to contact us at least 2-3 months in advance to ensure ample time for planning and coordination. For smaller events, 3-4 weeks’ notice is usually sufficient. However, the earlier you contact us, the better we can accommodate your needs.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var accordions = document.getElementsByClassName("accordion");
+
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+
+            
+            document.getElementById('search').addEventListener('input', function() {
+                var searchTerm = this.value.toLowerCase();
+                var accItems = document.getElementsByClassName('accordion');
+                var panels = document.getElementsByClassName('panel');
+
+                for (var i = 0; i < accItems.length; i++) {
+                    var text = accItems[i].textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        accItems[i].style.display = '';
+                    } else {
+                        accItems[i].style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
